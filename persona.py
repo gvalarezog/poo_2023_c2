@@ -15,6 +15,8 @@ class Persona:
     #         return f'Persona {self.__dict__.__str__()}':{self._vip}, '
     #             f'fecha_nacimiento: {self._fecha_nacimiento}]')
 
+    def __str__(self):
+        return f'Persona {self.__dict__.__str__()}'
 
 
 
@@ -39,3 +41,6 @@ if __name__ == '__main__':
 
     p4 = Persona(nombre='Maria', apellido='Paz', correo='mpaz@mail.com', edad='cinco', cedula='0123456789')
     print(p4._edad)
+
+    p5 = Persona(nombre='M', apellido='L', correo='g', cedula='5')
+    print(p5)
