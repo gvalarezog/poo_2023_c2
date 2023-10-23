@@ -18,29 +18,39 @@ class Persona:
     def __str__(self):
         return f'Persona {self.__dict__.__str__()}'
 
+    @property
+    def nombre(self):
+        return self._nombre
+    @nombre.setter
+    def nombre(self, nuevo_nombre):
+        self._nombre = nuevo_nombre
 
+    @property
+    def apellido(self):
+        return self._apellido
+
+    @apellido.setter
+    def apellido(self, apellido):
+        self._apellido = apellido
+
+    @property
+    def edad(self):
+        return self._edad
+
+    @edad.setter
+    def edad(self, edad):
+        self._edad = edad
 
 
 if __name__ == '__main__':
     objPersona1 = Persona(nombre='Karla', apellido='Paz', edad=15, cedula='0123456789', correo='kperez@mail.com')
     print(objPersona1.__str__())
-    print(objPersona1._nombre)
-    print(objPersona1._apellido)
-    print(objPersona1._edad)
 
-    p2 = Persona(nombre='Armando', cedula='0125874693', apellido='Perez', edad=20, correo='aperez@mail.com')
-    print(p2)
-    print(p2._nombre)
-    print(p2._apellido)
-    print(p2._edad)
-
-    p3 = Persona('Luis', 'Perez', '9876543120', 'lperez@mail.com', vip=True)
-    print(p3._nombre)
-    print(p3._correo)
-    print(p3._vip)
-
-    p4 = Persona(nombre='Maria', apellido='Paz', correo='mpaz@mail.com', edad='cinco', cedula='0123456789')
-    print(p4._edad)
-
-    p5 = Persona(nombre='M', apellido='L', correo='g', cedula='5')
-    print(p5)
+    # print(objPersona1._apellido)
+    # print(objPersona1._edad)
+    # objPersona1._nombre = 'Maria'
+    # print(objPersona1._nombre)
+    print(objPersona1.nombre)
+    objPersona1.nombre = 'Fernanda'
+    print(objPersona1.nombre)
+    # print(objPersona1._nombre)
